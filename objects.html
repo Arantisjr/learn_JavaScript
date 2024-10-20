@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <button onclick="myObject1.preOrder()">Show info</button>
+  <script>
+/*const myProduct = {
+  name:'Arantis',
+  sports: 'Football',
+  age: 20,
+};
+console.log(myProduct.sports);//dot notation
+//changing the value of the object
+myProduct.age = 19;
+console.log(myProduct.age);
+console.log(myProduct{"sports"}); // Bracket notation, we use if dot notation doesn't work
+console.log(JSON.stringify(myObject));
+when u insert a function inside an object its called "method"
+they are some built in objects such as math.random and console.log provided by javaScript
+
+they are other built in objects such as 
+JSON and Local storage
+JSON(javaScript object notation)
+- all properties and values in Json should be in double quotes 
+-json doesn't takes function like other objects
+- it has less features
+- JSON is more universal and can be understood by nearly every programming language
+- To convert am object to a JSON object we use JSON.stringfy()
+- for vice versa we use JSON.parse
+*/
+
+//Objects are is a collection of related data and/ or functionality.example
+/*const person  = {
+fullName : "Ngongang Arantis",
+age : 20,
+hobbies : ["coding","football","singing","Overthinking","gaming"],//an array is an object
+isMarried:false
+
+};
+console.log(person.hobbies);//dot notation 
+console.log(person["hobbies"][0]);//bracket notation
+//JS methods
+const myObject1 = {
+  sales : 200,
+  stocks: 500,
+  preOrder: function(){
+   alert("they're no pre orders only" + this.sales + "for sales" + this.stocks + "foe stocks"
+   );//string concatenation and the 'this' keyword
+  },
+}
+console.log(myObject1.preOrder());
+//using JSON
+console.log(JSON.stringify(myObject1));
+console.log(JSON.parse(JSON.stringify(myObject1)));
+
+//am objects inside an object
+const fruits = {
+  mango: {
+    color:' green',
+    taste:'sour'
+  },
+  avocado: {
+    color: 'red',
+    taste: 'milky'
+  }
+}
+console.log(fruits.avocado.taste);
+//Next is localStorage*/
+ //AUTO BOXING is special feature of JS in which it wraps a string into a an object, it works with other data types except undefined and null. lastly about objects javaScript do copy by reference
+
+ console.log('arantis'.length);
+ console.log('arantis'.toUpperCase());
+
+ const object1 = {
+  message: 'Good job!',
+  price:244,
+  method(){
+    console.log('this is JS short hand for method');
+  }
+ };
+//lets say you want to store the value inside the object1 in a variable message
+//let message = object1.message;
+//a shortcut
+let {message,price} = object1 //this is called object destructuring
+console.log(message)
+console.log(price)
+object1.method()
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project1</title>
+</head>
+<body>
+
+<button   onclick="
+console.log(`Cart quantity: ${cartQuantity1}`);
+  ">Show Quantity</button>
+
+
+<button onclick="
+cartQuantity1 = cartQuantity1 + 1;
+console.log(`Cart quantity: ${cartQuantity1}`);;
+">Add to cart</button>
+
+<button onclick="
+cartQuantity1 = cartQuantity1 + 2;
+console.log(`Cart quantity: ${cartQuantity1}`);
+">+2</button>
+
+<button  onclick="
+cartQuantity1 = cartQuantity1 + 3;
+console.log(`Cart quantity: ${cartQuantity1}`);
+">+3</button>
+
+<button onclick="
+console.log(`You cleared your cart`);
+cartQuantity1 = 0;
+console.log(`Cart quantity: ${cartQuantity1}`);
+
+">Reset Cart</button>
+
+  <script>
+
+
+let cartQuantity1 = 0;
+console.log(typeof 3);
+
+//bolean lesson
+console.log(3>5); //false
+console.log(3 < 5); // true
+console.log(4 >= 3); // true
+console.log(4 <= 3);  //false
+console.log(4 === 3); // false
+console.log(4 === 4);  // true
+console.log(4 !== 3);  // trues
+
+// if statements
+if (true){
+  console.log('hello world');
+}
+if (false){
+  console.log('hello world');
+}else{
+  console.log("life is all about binary 1's and 0's");
+}
+
+//real world examples 
+const legalAge = 16;
+if(30 >= legalAge){
+  console.log('Eligible to drive a car');
+
+}else{
+  console.log('not eligible');
+}
+//bolean operators
+console.log(true && true) //AND operator, checks if the left hand and right hand are thesame. Ans = true
+console.log( true || false); //OR operator, checks if one of the sides are thesame, Ans=true
+console.log(!true); // ans=false. NOT operator negates
+
+/*TRUTHY $ FALSY values.
+FALSY:false, 0, '', NaN, undefined, null,
+any value who isn't up there is a truthy value
+*/
+if(NaN){
+console.log('never give up');
+}
+console.log('legacies' / 5) // NaN
+let var1;
+console.log(var1); // undefined
+
+
+
+
+/*Tenary operators: They acts as a short cut if statements, 
+and we can store a tenary operator in a variable*/
+const ten1 = true ? 'truthy' : 'falsy';
+console.log(ten1);
+
+//Guard operator 
+
+  </script>
+</body>
+</html>

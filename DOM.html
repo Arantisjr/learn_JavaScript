@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <!--Note that html elements are javascript objects and objects can be stored in a variable-->
+  <button>hello</button>
+  <button class="js-button">Second button</button>
+  <script>
+console.log(document.querySelector('button'));
+console.log(document.querySelector('button').innerHTML);
+let buttonElem = document.querySelector('.js-button').innerHTML;
+console.log(buttonElem);
+
+//in the class of the html always us js at the starting for convinience
+
+//document.body.innerHTML = 'hello world'
+//document.title = 'document';
+//DOM also has properties and methods
+//console.log(document.body);
+//console.log(typeof document.body);
+  </script>
+</body>
+</html>

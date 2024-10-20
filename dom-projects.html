@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-projects</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-button" onclick=" subscribe() ">Subscribe</button>
+
+
+    <p>Amazon shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input class="js-input" placeholder="cost of order" onkeydown="keyEnter(event)">
+    <button onclick="calculator()">calculate</button>
+    <p class="js-order"></p>
+
+    <script>
+      String(30);
+      console.log('25' - 10); //Type coercion, JS automatically converts the string into a number
+      console.log('25' + 10); //Type coercion, JS automatically converts the number into a string with addition hence not good to for arithmetic purposes
+
+// The window object
+//the window object contains the document and console
+
+function keyEnter(event) {
+  //console.log(event.key);
+    if(event.key === 'Enter'){
+      calculator()
+    }
+}
+
+ function calculator() {
+  let inputElem =Number(document.querySelector(".js-input").value);//whenever we get a value from an input tag it'll be a string,we convert the value into a number
+  if(inputElem < 40){ // we can also convert a number into a string using the built in object String
+ inputElem = inputElem + 10;
+ document.querySelector(".js-order").innerHTML= `$${inputElem}`;
+  }else{
+    document.querySelector(".js-order").innerHTML= `$${inputElem}`;
+  }//clicks and keydown are known as EVENTS while onclick and onkeydown are known as event listeners
+  /*
+  some other event listener include
+  onclick = click
+  onkeydown= keypress
+  onscroll =scrolling
+  onmouseenter = hovering over
+  onmouseleave = stop hovering over
+  
+  */
+  
+ }
+
+
+      function subscribe() {
+        const buttonElem = document.querySelector(".js-button");
+        if (buttonElem.innerText === "Subscribe") {
+          buttonElem.innerText = "Subscribed";
+        } else {
+          buttonElem.innerText = "Subscribe";
+        }
+      }
+      //innerText vs innerHTML
+      //innerText neglects spaces while innerHTML doesn't
+    </script>
+  </body>
+</html>

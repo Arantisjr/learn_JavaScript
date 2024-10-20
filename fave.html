@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>equation</title>
+</head>
+<body>
+  <script>
+  function solveEquation(a,b,c){
+    //calculating the discriminant
+    let discriminant = b*b - 4*a*c;
+    //checking if it has real root
+    if(discriminant > 0){
+      //real roots
+      let x1 = ((-b + Math.sqrt(discriminant)) / 2*a);
+      let x2 = ((-b - Math.sqrt(discriminant)) / 2*a);
+
+      console.log('the solutions are: x1 = ' + x1.toFixed(3) + 'and x2 =' + x2.toFixed(3));
+    }else if(discriminant ===0){
+      //equal roots
+      let x = -b / 2*a;
+      console.log('the roots are equal hence x = ' + x.toFixed(3));
+    }else{
+      //complex roots
+      console.log('the equation has no real root/solution');
+    }
+  }
+  solveEquation(1,3,2);//manual calculation x1=-1 and x=-2 console: x1=1.000 x2 =2.000 hence accurate
+  </script>
+</body>
+</html>
